@@ -23,15 +23,14 @@
         app:layout_constraintTop_toBottomOf="@+id/btnOff"
         />
 
-    <TextView
-        android:id="@+id/tvPress"
+    <EditText
+        android:id="@+id/etName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Press on the Button"
+        android:hint="Enter your name"
         android:textColor="@android:color/darker_gray"
-        android:textSize="40sp"
-        android:textStyle="bold"
+        android:textSize="30sp"
 
         app:layout_constraintBottom_toTopOf="@+id/btnOn"
         app:layout_constraintEnd_toEndOf="parent"
