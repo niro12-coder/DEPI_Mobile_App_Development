@@ -7,101 +7,74 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnClose"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="54dp"
+    <TextView
+        android:id="@+id/TvTitle"
 
-        android:background="@color/close"
-        android:hint="Close"
-
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOff"
-        />
-
-    <EditText
-        android:id="@+id/etName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:hint="Enter your name"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="30sp"
-
-        app:layout_constraintBottom_toTopOf="@+id/btnOn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <LinearLayout
-
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:orientation="vertical"
-        android:paddingTop="23dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="Sign Up"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="40dp"
-            android:text="~Welcome~"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="40sp"
-            android:textStyle="bold"
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextUsername"
+        android:hint="Username"
+        android:textColorHint="@android:color/holo_blue_light"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvTitle"
+        app:endIconMode="clear_text"
+
+        >
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+
+       />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsername">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:endIconMode="clear_text"
 
             />
 
-        <Button
-            android:id="@+id/lamp"
-            android:layout_width="230dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:background="@color/close"
-            android:hint="Light Bulb"
-            android:textSize="35sp"
-            android:textStyle="italic" />
-
-    </LinearLayout>
-
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnOn"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:background="@color/green"
-
-        android:hint="On"
-        android:textSize="25sp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnOff"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-
-
-        />
-
-    <Button
-        android:id="@+id/btnOff"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:background="@color/red"
-        android:hint="Off"
-
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:background="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnOn"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,16 +24,6 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        binding.btnOn.setOnClickListener {
-            binding.lamp.setBackgroundColor(ContextCompat.getColor(this, R.color.green))
-        }
 
-        binding.btnOff.setOnClickListener {
-            binding.lamp.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-        }
-
-        binding.btnClose.setOnClickListener {
-            binding.lamp.setBackgroundColor(ContextCompat.getColor(this, R.color.close))
-        }
     }
 }
