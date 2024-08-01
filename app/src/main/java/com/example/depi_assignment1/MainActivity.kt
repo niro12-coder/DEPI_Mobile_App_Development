@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
             insets
 
         }
+            // code
 
         binding.btnOn.setOnClickListener {
             binding.lamp.setBackgroundColor(ContextCompat.getColor(this, R.color.green))
