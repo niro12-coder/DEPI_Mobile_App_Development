@@ -17,13 +17,12 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35ticpg236-1L
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
+set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir D:/StudioProjects/DEPI_Projects/project_1/project_1.cache/wt [current_project]
 set_property parent.project_path D:/StudioProjects/DEPI_Projects/project_1/project_1.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
@@ -31,6 +30,10 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/StudioProjects/DEPI_Projects/project_1/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {{D:/StudioProjects/DEPI_Projects/ALU with clk.v}}
+read_ip -quiet d:/StudioProjects/DEPI_Projects/project_1/project_1.srcs/sources_1/ip/c_addsub_0/c_addsub_0.xci
+
+read_ip -quiet d:/StudioProjects/DEPI_Projects/project_1/project_1.srcs/sources_1/ip/mult_gen_0/mult_gen_0.xci
+
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
